@@ -59,3 +59,25 @@ print p_tel
 print p_tel.findall('010-12345678')
 
 print dir(re)
+
+r1 = r'a[bc]d'
+p_r1 = re.compile(r1)
+print p_r1.findall('abd')
+
+#邮箱
+r1 = r'(^[\w.]*@\w*\.com$|^[\w.]*@\w*\.cn$)'
+print re.findall(r1,'abc@123.cn')
+
+s = '''
+hello csvt
+csvt hello
+hello csvt hello
+csvt hehe
+'''
+print s
+r = r'^csvt'
+print re.findall(r,s,re.M)
+
+email = r"\w{3}@\w+(\.com|\.cn)"
+print re.findall(email,'zzz@csvt.com')
+
