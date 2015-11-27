@@ -81,3 +81,9 @@ print re.findall(r,s,re.M)
 email = r"\w{3}@\w+(\.com|\.cn)"
 print re.findall(email,'zzz@csvt.com')
 
+s = '''vw abc and defxxxfex,andaoixcoqwefoavojxow'''
+r = r'.*and.*'
+print re.findall(r,s)
+r = r"^((?!and).)*$"
+print re.findall(r,s)
+
